@@ -1,18 +1,10 @@
 .home {
-    /* position:absolute;
-    top: 0;
-    left: 0;
-    right: 0; */
     width: 100%;
     min-height: 100%;
     background-color: rgb(77, 77, 77);
 }
 
 .home_welcome {
-    /* position:absolute;
-    top: 0;
-    left: 0;
-    right: 0; */
     padding-top: 10%;
     min-height: 100%;
     width: 100%;

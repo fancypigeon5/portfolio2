@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/portfolio2/static/css/main.00d167a4.css",
+    "main.js": "/portfolio2/static/js/main.755564f5.js",
+    "static/js/787.1ed0c42c.chunk.js": "/portfolio2/static/js/787.1ed0c42c.chunk.js",
+    "static/media/laptop-opening.mp4": "/portfolio2/static/media/laptop-opening.5a4d90833af32ac7b746.mp4",
+    "static/media/developer.png": "/portfolio2/static/media/developer.c66eea6b1525f5569e56.png",
+    "static/media/website3.jpg": "/portfolio2/static/media/website3.231bcbf6f603c331eebd.jpg",
+    "static/media/website1.png": "/portfolio2/static/media/website1.2344a37a388be82b9820.png",
+    "static/media/website2.jpg": "/portfolio2/static/media/website2.1e1f27c25f078ab76339.jpg",
+    "static/media/logo.png": "/portfolio2/static/media/logo.7fd4c78bbcba067385ed.png",
+    "static/media/programming.jpg": "/portfolio2/static/media/programming.ff5c2f459e35da70fa25.jpg",
+    "static/media/website4.png": "/portfolio2/static/media/website4.ff9420a851c284feb620.png",
+    "static/media/coder.jpg": "/portfolio2/static/media/coder.8a65a67efec74ed9a592.jpg",
+    "static/media/languages.png": "/portfolio2/static/media/languages.6795e6ab1be35bb615ea.png",
+    "static/media/xmark.svg": "/portfolio2/static/media/xmark.8b7c1d8832338a3e585f.svg",
+    "static/media/bars.svg": "/portfolio2/static/media/bars.097d01d1172705aa08c6.svg",
+    "index.html": "/portfolio2/index.html",
+    "main.00d167a4.css.map": "/portfolio2/static/css/main.00d167a4.css.map",
+    "main.755564f5.js.map": "/portfolio2/static/js/main.755564f5.js.map",
+    "787.1ed0c42c.chunk.js.map": "/portfolio2/static/js/787.1ed0c42c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.00d167a4.css",
+    "static/js/main.755564f5.js"
+  ]
+}
