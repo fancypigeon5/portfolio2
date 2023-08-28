@@ -1,0 +1,80 @@
+.home {
+    /* position:absolute;
+    top: 0;
+    left: 0;
+    right: 0; */
+    width: 100%;
+    min-height: 100%;
+    background-color: rgb(77, 77, 77);
+}
+
+.home_welcome {
+    /* position:absolute;
+    top: 0;
+    left: 0;
+    right: 0; */
+    padding-top: 10%;
+    min-height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.home_top {
+    display: flex;
+    justify-content: space-around;
+}
+
+.home_welcome img {
+    width: 50%;
+    object-fit: contain;
+}
+
+.home_welcome h1 {
+    font-family: 'lobster';
+    font-size: 3em;
+    padding: 0;
+    margin: 0;
+    
+}
+
+.home_text {
+    align-self: center;
+    font-size: 3em;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home_buttons {
+    width: 100%;
+}
+
+.buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.buttons .button {
+    width: 30%;
+    font-size: 5em;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons p:hover {
+    box-shadow: 0px 0px 5px beige;
+}
+
+.button p {
+    width: 100%;
+    padding: 3%;
+    background-color: rgb(58, 58, 58);
+    border-radius: 20px;
+}

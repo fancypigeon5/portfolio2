@@ -1,0 +1,57 @@
+.wrapper {
+    height: 700vh;
+}
+
+.videoscroll {
+    position: sticky; 
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+#v0 {
+    top: 0;
+    height: 100vh;
+    width: auto;
+    object-fit: cover;
+}
+
+.homevideo_welcome {
+    position: fixed;
+    opacity: 1;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    height: 20vh;
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0,2s ease;
+}
+
+.homevideo_welcome.hide {
+    display: none;
+}
+
+.site {
+    overflow: hidden;
+    margin: 0;
+    position: fixed;
+    overflow-y: auto;
+    top: 19.2vh;
+    left: 50%;
+    transform: translateX(-50%) scale(1);
+    z-index: 1000;
+    height: 47.2vh;
+    width: 71vh;
+    max-height: 100vh;
+    max-width: 100vw;
+    background-color: rgba(0, 255, 255, .3)
+}
+
+.site.hide_site {
+    display: none;
+}
