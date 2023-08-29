@@ -110,7 +110,7 @@ function App() {
           route==='homevideo'
             ? <HomeVideo hidesite={hidesite} routeChange={routeChange} scrollheight={scrollheight}/>  
             : (route === 'home'
-                ? <Home routeChange={routeChange} scrollheight={scrollheight}/>
+                ? <main><Home routeChange={routeChange} scrollheight={scrollheight}/></main>
                 : (route==='about'
                   ? <About/>
                   : (route === 'projects'
