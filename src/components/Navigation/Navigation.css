@@ -4,7 +4,7 @@ nav {
     width: 100%;
     max-width: 100%;
     min-width: 100%;
-    height: 15vh;
+    height: 12vh;
     box-shadow: 0px 0px 10px black;
     position: fixed;
     background-color: rgb(35, 35, 35);
@@ -50,7 +50,7 @@ nav.hidden .pages {
     cursor: pointer;
 }
 
-nav.scrolled img {
+nav.scrolled img, nav.hidden img {
     display: none;
 }
 
@@ -76,9 +76,11 @@ nav.scrolled #button {
 
 nav.hidden #button {
     background-image: url('bars.svg');
+    display: block;
 }
 
 .pages {
+    font-size: large;
     opacity: 100;
     display: block;
     width: 50vw;

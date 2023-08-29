@@ -3,6 +3,7 @@ import About from '../components/About/About';
 import Projects from '../components/Projects/Projects';
 import Home from '../components/Home/Home';
 import HomeVideo from '../components/Video/Video';
+import Contact from '../components/Contact/Contact';
 import './App.css';
 import React , {useState , useEffect} from 'react';
 
@@ -94,6 +95,12 @@ function App() {
   })
 
   useEffect(() => {
+    if (route === 'homevideo' && !scrolled) {
+      setHidden(true);
+    }
+  }, [route, scrolled])
+
+  useEffect(() => {
     let nav = document.querySelector('nav');
 
     if (scrolled) {
@@ -115,7 +122,7 @@ function App() {
                   ? <About/>
                   : (route === 'projects'
                       ?<Projects/>
-                      :<main className='test'>not about</main>  
+                      :<Contact/>  
                     )
                   )
               )          
