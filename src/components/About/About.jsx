@@ -6,8 +6,7 @@ import languages from './languages.png';
 
 const About = () => {
     return (
-        <main>
-            <div className="about_container">
+            <div id='about' className="about_container">
                 <div className="about_welcome">
                     <h1>About me</h1>
                 </div>
@@ -34,15 +33,16 @@ const About = () => {
                     </div>
                     <div className="block">
                         <img src={languages} alt="coder" /> 
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga error dicta quae perferendis fugit esse ea suscipit illum neque! Facere omnis laudantium, nam repellendus id dolorum quaerat? Quisquam, corrupti! Illo.
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis similique, veniam officia, cum ullam optio asperiores quo quam ea commodi corporis corrupti, reiciendis repellat laudantium doloremque numquam pariatur excepturi accusantium.
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, rem! Earum nemo vero totam repellendus suscipit illo ex accusantium officia. Earum porro vero quisquam quod aut quos voluptatum voluptates nostrum.
-                        </p>
+                        <div>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga error dicta quae perferendis fugit esse ea suscipit illum neque! Facere omnis laudantium, nam repellendus id dolorum quaerat? Quisquam, corrupti! Illo.
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis similique, veniam officia, cum ullam optio asperiores quo quam ea commodi corporis corrupti, reiciendis repellat laudantium doloremque numquam pariatur excepturi accusantium.
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, rem! Earum nemo vero totam repellendus suscipit illo ex accusantium officia. Earum porro vero quisquam quod aut quos voluptatum voluptates nostrum.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </main>
     )
 }
 

@@ -49,7 +49,9 @@
     width: 71vh;
     max-height: 100vh;
     max-width: 100vw;
-    background-color: rgba(0, 255, 255, .3)
+    background-image: url('../../../public/background.png');
+    background-size: cover;
+    background-position: center;
 }
 
 .site.hide_site {

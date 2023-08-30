@@ -7,8 +7,7 @@ import website4 from './website4.png';
 
 const Projects = () => {
     return (
-        <main>
-            <div className='projects_container'>
+            <div id='projects' className='projects_container'>
         	    <div className='projects_welcome'>
                     <h1>Projects</h1>
                 </div>
@@ -59,7 +58,6 @@ const Projects = () => {
                     </div>
                 </div>
             </div>
-        </main>
     )
 }
 

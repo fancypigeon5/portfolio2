@@ -7,16 +7,24 @@ import Contact from '../components/Contact/Contact';
 import './App.css';
 import React , {useState , useEffect} from 'react';
 
-function App() {
+function App({initialroute}) {
   const [scrolled, setScrolled] = useState(false)
   const [scrollheight, setScrollheight ] = useState(0)
   const [hidesite, setHidesite] = useState(true)
   const [hidden, setHidden] = useState(false)
-  const [route, setRoute] = useState('homevideo')
+  const [route, setRoute] = useState(initialroute)
 
   const routeChange = (route) => {
     setRoute(route)
   }
+
+
+  const scrollTo = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   const scroll = () => {
     if (window.pageYOffset > 1) {
@@ -30,10 +38,20 @@ function App() {
   }
 
   useEffect(() => {
+    if (route === 'homevideo' || route === 'home') {
+      window.scrollTo({
+        top: 0
+      })
+    } else {
+      scrollTo(route);
+    }
+  }, [route])
+
+/*   useEffect(() => {
     window.scrollTo({
       top: 0
     })
-  }, [route])
+  }, [route]) */
   
   useEffect(() => {
     window.addEventListener('scroll', scroll);
@@ -112,23 +130,40 @@ function App() {
   
   return (
     <div className="App">
-      <Navigation routeChange={routeChange} hidden={hidden}/>
+      <Navigation  hidden={hidden} routeChange={routeChange}/>
         {
-          route==='homevideo'
-            ? <HomeVideo hidesite={hidesite} routeChange={routeChange} scrollheight={scrollheight}/>  
-            : (route === 'home'
-                ? <main><Home routeChange={routeChange} scrollheight={scrollheight}/></main>
-                : (route==='about'
-                  ? <About/>
-                  : (route === 'projects'
-                      ?<Projects/>
-                      :<Contact/>  
-                    )
-                  )
-              )          
+          route === 'homevideo'
+            ? <main><HomeVideo hidesite={hidesite} routeChange={routeChange} scrollheight={scrollheight}/></main>
+            : <main>
+                <div className='background'></div>
+                <Home routeChange={routeChange} scrollheight={scrollheight}/>
+                <About/>
+                <Projects/>
+                <Contact/>
+              </main>
         }
     </div>
   );
 }
 
 export default App;
+
+/* return (
+  <div className="App">
+    <Navigation routeChange={routeChange} hidden={hidden}/>
+      {
+        route==='homevideo'
+          ? <HomeVideo hidesite={hidesite} routeChange={routeChange} scrollheight={scrollheight}/>  
+          : (route === 'home'
+              ? <main><Home routeChange={routeChange} scrollheight={scrollheight}/></main>
+              : (route==='about'
+                ? <About/>
+                : (route === 'projects'
+                    ?<Projects/>
+                    :<Contact/>  
+                  )
+                )
+            )          
+      }
+  </div>
+); */

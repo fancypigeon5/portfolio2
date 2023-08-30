@@ -1,5 +1,5 @@
 .projects_welcome {
-    height: 85vh;
+    height: 65vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,7 +13,7 @@
 }
 
 .projects {
-    background-color: rgb(58, 58, 58);
+    background-color: rgba(35, 35, 35, 0.7);
     display: flex;
     justify-content: center;
     flex-wrap: wrap;

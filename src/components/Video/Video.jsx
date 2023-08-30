@@ -1,10 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
+import ReactDOM from 'react-dom/client';
+import App from "../../containers/App";
 import laptop from './laptop-opening.mp4';
 import "./Video.css";
 import Home from '../Home/Home';
 import ScrollVideo from "react-scroll-video";
 
-export default function HomeVideo({hidesite, routeChange, scrollheight}) {
+export default function HomeVideo({ hidesite, routeChange, scrollheight }) {
     useEffect(() => {
         const site = document.querySelector(".site");
     
@@ -73,20 +75,29 @@ export default function HomeVideo({hidesite, routeChange, scrollheight}) {
         }
     })
 
-    useEffect(() => {
+    /* useEffect(() => {
+        const site = document.getElementById('site')
+        if(site) {
+        ReactDOM.createRoot(site).render(
+            <App initialroute='home' />
+        );
+        }
+    }, []) */
+
+    /* useEffect(() => {
         const welcome = document.querySelector('.home_welcome');
         const parentwidth = welcome.clientWidth;
         welcome.style.fontSize = parentwidth/250 + 'px';
-    }, [scrollheight])
+    }, [scrollheight]) */
+
 
     return (
-        <main>
         <div className="wrapper">
             <div className="homevideo_welcome">
                 <h1>Welcome</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste sequi cumque cupiditate et iusto ea veniam? Porro non nostrum et voluptate dolorum delectus, nemo corrupti rerum cupiditate aperiam consequuntur qui.</p>
             </div>
-            <div className="site">
+            <div id='site' className="site">
                 <Home routeChange={routeChange} scrollheight={scrollheight}/>
             </div>
             <ScrollVideo
@@ -95,7 +106,5 @@ export default function HomeVideo({hidesite, routeChange, scrollheight}) {
                 src={laptop}
             />
         </div>
-        
-        </main>
     );
 }
