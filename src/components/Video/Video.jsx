@@ -1,12 +1,10 @@
-import React, { useEffect, useRef, useState } from "react";
-import ReactDOM from 'react-dom/client';
-import App from "../../containers/App";
-import laptop from './laptop-opening.mp4';
+import React, { useEffect } from "react";
 import "./Video.css";
 import Home from '../Home/Home';
 import ScrollVideo from "react-scroll-video";
 
-export default function HomeVideo({ hidesite, routeChange, scrollheight }) {
+export default function HomeVideo({ laptop, phone, hidesite, routeChange, scrollheight }) {
+    
     useEffect(() => {
         const site = document.querySelector(".site");
     
@@ -24,28 +22,54 @@ export default function HomeVideo({ hidesite, routeChange, scrollheight }) {
         let width = window.innerWidth;
         let height = window.innerHeight;
         window.addEventListener('scroll', function() {
-            let offset = window.pageYOffset - 1450;
-            if (offset < 0) {
-            site.style.top = "19.2vh";
-            site.style.height = "47.2vh";
-            site.style.width = "71vh";
-            video.style.top = "0vh";
-            video.style.height = "100vh";
-            return; 
+            if (laptop) {
+                let offset = window.pageYOffset - 1450;
+                if (offset < 0) {
+                site.style.top = "19.2vh";
+                site.style.height = "47.2vh";
+                site.style.width = "71vh";
+                video.style.top = "0vh";
+                video.style.height = "100vh";
+                return; 
+                }
+                else { 
+                if ((((47.2+(offset/10.7))*(71/47.2))* (height/100)) < width) {
+                    site.style.width = (47.2+(offset/10.7))*(71/47.2) + "vh";
+                }
+                else {
+                    site.style.width = "100vw";
+                };
+                site.style.height = Math.min(Math.max(47.2+(offset/10.7), 47.2), 100) + "vh";
+                site.style.top = Math.max((19.2 - offset/60), 0) + "vh";
+                video.style.height = (100 + offset/5) + "vh";
+                video.style.top = -(offset/18) + "vh";
+                return;
+                }
+            } else {
+                let offset = window.pageYOffset - 1450;
+                if (offset < 0) {
+                site.style.top = "33.5vh";
+                site.style.height = "40vh";
+                site.style.width = "18vh";
+                video.style.top = "0vh";
+                video.style.height = "100vh";
+                return; 
+                }
+                else { 
+                if ((((40+(offset/10.7))*(18/40))* (height/100)) < width) {
+                    site.style.width = (40+(offset/10.7))*(18/40) + "vh";
+                }
+                else {
+                    site.style.width = "100vw";
+                };
+                site.style.height = Math.min(Math.max(40+(offset/10.7), 40), 100) + "vh";
+                site.style.top = Math.max((33.5 - offset/30), 0) + "vh";
+                video.style.height = (100 + offset/5) + "vh";
+                video.style.top = -(offset/10) + "vh";
+                return;
+                }
             }
-            else { 
-            if ((((47.2+(offset/10.7))*(71/47.2))* (height/100)) < width) {
-                site.style.width = (47.2+(offset/10.7))*(71/47.2) + "vh";
-            }
-            else {
-                site.style.width = "100vw";
-            };
-            site.style.height = Math.min(Math.max(47.2+(offset/10.7), 47.2), 100) + "vh";
-            site.style.top = Math.max((19.2 - offset/60), 0) + "vh";
-            video.style.height = (100 + offset/5) + "vh";
-            video.style.top = -(offset/18) + "vh";
-            return;
-            }
+            
         });
     })
 
@@ -74,7 +98,6 @@ export default function HomeVideo({ hidesite, routeChange, scrollheight }) {
             welcome.classList.add("hide")
         }
     })
-
     /* useEffect(() => {
         const site = document.getElementById('site')
         if(site) {
@@ -103,7 +126,7 @@ export default function HomeVideo({ hidesite, routeChange, scrollheight }) {
             <ScrollVideo
                 className= 'videoscroll'
                 playbackRate={100}
-                src={laptop}
+                src={phone}
             />
         </div>
     );

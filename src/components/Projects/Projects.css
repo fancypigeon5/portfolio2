@@ -1,9 +1,98 @@
+@media only screen and (max-width: 640px) {
+    .projects {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .project .link {
+        margin: 5%;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        border-radius: 10px;
+        justify-content: center;
+        background-color: rgba(35, 35, 35, 0.7);
+    }
+
+    .project {
+        width: 90%;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .project .overlay {
+        height: 50%;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .project img {
+        width: 100%;
+    }
+
+    .project p {
+        opacity: 1;
+        transition: all 0.3s ease;
+        transition-delay: 0s;
+        padding: 3% 10% 10% 10%;
+    }
+}
+@media only screen and (min-width: 640px) {
+    .project .link {
+        transition: all .5s ease;
+        position: relative;
+        width: 36vw;
+        aspect-ratio: 16 / 9;
+        border-radius: 10px;
+    }
+
+    .project {
+        width: 44vw;
+        aspect-ratio: 16 / 9;
+        margin: 30px;
+        border-radius: 10px;
+        cursor: pointer;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .project .overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(35, 35, 35, 0.9);
+        overflow: hidden;
+        width: 100%;
+        height: 0;
+        border-radius: 0px 0px 10px 10px;
+        transition: .5s ease;
+    }
+
+    .project img {
+        width: 100%;
+    }
+
+    .project p {
+        opacity: 0;
+        transition: all 0.3s ease;
+        transition-delay: 0s;
+        padding: 3% 10% 10% 10%;
+    }
+}
+
 .projects_welcome {
     height: 65vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+
 
 .projects_welcome h1 {
     font-family: 'lobster';
@@ -19,44 +108,10 @@
     flex-wrap: wrap;
 }
 
-.project {
-    width: 44vw;
-    aspect-ratio: 16 / 9;
-    margin: 30px;
-    border-radius: 10px;
-    cursor: pointer;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.project .link {
-    transition: all .5s ease;
-    position: relative;
-    width: 36vw;
-    aspect-ratio: 16 / 9;
-    border-radius: 10px;
-}
-
 .project img {
-    width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
-}
-
-.project .overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(35, 35, 35, 0.9);
-    overflow: hidden;
-    width: 100%;
-    height: 0;
-    border-radius: 0px 0px 10px 10px;
-    transition: .5s ease;
 }
 
 .project:hover .link {
@@ -67,13 +122,6 @@
 
 .project:hover .overlay {
     height: 60%;
-}
-
-.project p {
-    opacity: 0;
-    transition: all 0.3s ease;
-    transition-delay: 0s;
-    padding: 3% 10% 10% 10%;
 }
 
 .project:hover p {

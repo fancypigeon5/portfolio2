@@ -1,8 +1,25 @@
+@media only screen and (max-width: 640px) {
+    .home_text {
+        font-size: 10em;
+        width: 70%;
+    }
+    .home_icons i {
+        font-size: 1.5em;
+    }
+}
+@media only screen and (min-width: 640px) {
+    .home_text {
+        font-size: 3em;
+        width: 50%;
+    }
+    .home_icons i {
+        font-size: 2em;
+    }
+}
+
 .home {
     width: 100%;
     height: 100%;
-    /* background-image: url('../../../public/background.png');
-    background-size: cover; */
 }
 
 .home_welcome {
@@ -27,8 +44,6 @@
     border-radius: 20px;
     padding: 5%;
     align-self: center;
-    font-size: 3em;
-    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -43,10 +58,6 @@
     width: 60%;
     display: flex;
     justify-content: space-between;
-}
-
-.home_icons i {
-    font-size: 2em;
 }
 
 /* .home_buttons {

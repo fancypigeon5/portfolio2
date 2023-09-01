@@ -20,11 +20,11 @@ const Home = ({ routeChange, scrollheight }) => {
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. A, possimus dolore dolor odit totam veritatis omnis unde neque magnam maxime quaerat temporibus atque minus est cum enim qui deleniti eius?
                     </p>
                     <div className='home_icons'>
-                        <i class="devicon-html5-plain-wordmark"></i>
-                        <i class="devicon-css3-plain-wordmark"></i>
-                        <i class="devicon-javascript-plain"></i>
-                        <i class="devicon-react-original-wordmark"></i>
-                        <i class="devicon-github-original-wordmark"></i>                    
+                        <i className="devicon-html5-plain-wordmark"></i>
+                        <i className="devicon-css3-plain-wordmark"></i>
+                        <i className="devicon-javascript-plain"></i>
+                        <i className="devicon-react-original-wordmark"></i>
+                        <i className="devicon-github-original-wordmark"></i>                    
                 </div>
                 </div>    
                 
