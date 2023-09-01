@@ -2,13 +2,13 @@ import { useEffect } from 'react';
 import React from "react";
 import "./Home.css";
 
-const Home = ({ routeChange, scrollheight }) => {
+const Home = ({ resize, scrollheight }) => {
     
     useEffect(() => {
         let welcome = document.querySelector('.home_welcome');
         const parentwidth = welcome.clientWidth;
         welcome.style.fontSize = parentwidth/250 + 'px';
-    }, [scrollheight])
+    }, [scrollheight, resize])
     
 
     return (

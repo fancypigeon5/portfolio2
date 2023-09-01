@@ -3,7 +3,7 @@ import "./Video.css";
 import Home from '../Home/Home';
 import ScrollVideo from "react-scroll-video";
 
-export default function HomeVideo({ laptop, phone, hidesite, routeChange, scrollheight }) {
+export default function HomeVideo({ resize, laptop, phone, hidesite, routeChange, scrollheight }) {
     
     useEffect(() => {
         const site = document.querySelector(".site");
@@ -100,14 +100,6 @@ export default function HomeVideo({ laptop, phone, hidesite, routeChange, scroll
             welcome.classList.add("hide")
         }
     })
-    /* useEffect(() => {
-        const site = document.getElementById('site')
-        if(site) {
-        ReactDOM.createRoot(site).render(
-            <App initialroute='home' />
-        );
-        }
-    }, []) */
 
     /* useEffect(() => {
         const welcome = document.querySelector('.home_welcome');
@@ -123,11 +115,11 @@ export default function HomeVideo({ laptop, phone, hidesite, routeChange, scroll
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste sequi cumque cupiditate et iusto ea veniam? Porro non nostrum et voluptate dolorum delectus, nemo corrupti rerum cupiditate aperiam consequuntur qui.</p>
             </div>
             <div id='site' className="site">
-                <Home routeChange={routeChange} scrollheight={scrollheight}/>
+                <Home resize={resize} scrollheight={scrollheight}/>
             </div>
             <ScrollVideo
                 className= 'videoscroll'
-                playbackRate={100}
+                playbackRate={200}
                 src={phone}
             />
         </div>

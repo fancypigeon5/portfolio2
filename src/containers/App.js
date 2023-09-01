@@ -17,6 +17,7 @@ function App({initialroute}) {
   const [route, setRoute] = useState(initialroute)
   const [phone, setPhone] = useState(phonevideo)
   const [laptop, setLaptop] = useState(true)
+  const [resize, setResize] = useState(1)
 
   const routeChange = (route) => {
     setRoute(route)
@@ -24,6 +25,7 @@ function App({initialroute}) {
 
   const handlePhone = () => {
     let e = window.innerWidth;
+    setResize(e);
     if (e < 640) {
       setPhone(phonevideo);
       setLaptop(false)
@@ -168,10 +170,10 @@ function App({initialroute}) {
       <Navigation  laptop={laptop} routeChange={routeChange}/>
         {
           route === 'homevideo'
-            ? <main><HomeVideo phone={phone} laptop={laptop} hidesite={hidesite} routeChange={routeChange} scrollheight={scrollheight}/></main>
+            ? <main><HomeVideo resize={resize} phone={phone} laptop={laptop} hidesite={hidesite} routeChange={routeChange} scrollheight={scrollheight}/></main>
             : <main>
                 <div className='background'></div>
-                <Home routeChange={routeChange} scrollheight={scrollheight}/>
+                <Home resize={resize} scrollheight={scrollheight}/>
                 <About/>
                 <Projects/>
                 <Contact/>
