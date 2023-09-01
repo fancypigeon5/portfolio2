@@ -51,19 +51,21 @@ export default function HomeVideo({ laptop, phone, hidesite, routeChange, scroll
                 site.style.top = "33.5vh";
                 site.style.height = "40vh";
                 site.style.width = "18vh";
+                site.style.borderRadius = "10px";
                 video.style.top = "0vh";
                 video.style.height = "100vh";
                 return; 
                 }
                 else { 
-                if ((((40+(offset/10.7))*(18/40))* (height/100)) < width) {
-                    site.style.width = (40+(offset/10.7))*(18/40) + "vh";
+                if ((((40+(offset/12))*(18/40))* (height/100)) < width) {
+                    site.style.width = (40+(offset/12))*(18/40) + "vh";
                 }
                 else {
                     site.style.width = "100vw";
                 };
-                site.style.height = Math.min(Math.max(40+(offset/10.7), 40), 100) + "vh";
+                site.style.height = Math.min(Math.max(40+(offset/12), 40), 100) + "vh";
                 site.style.top = Math.max((33.5 - offset/30), 0) + "vh";
+                site.style.borderRadius = 10 + offset/60 + "px";
                 video.style.height = (100 + offset/5) + "vh";
                 video.style.top = -(offset/10) + "vh";
                 return;
