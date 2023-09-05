@@ -15,18 +15,14 @@ const About = () => {
                         <img src={programming} alt="programming" />
                         <div>
                             <p>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur voluptate, reprehenderit aliquid obcaecati eius qui dolore eligendi magni eveniet pariatur ea corrupti rem nam suscipit et consequatur eaque exercitationem quas!
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam porro, eligendi nesciunt exercitationem deleniti ipsam totam deserunt ut, modi sint obcaecati? Corporis voluptatum accusantium esse incidunt fugiat quis est neque!
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae aliquam ullam, incidunt accusantium sed culpa corrupti repellendus minus vero alias illum. Rem quis maxime architecto molestiae possimus ratione praesentium dolor?
+                                Welcome to my web development world! I'm Jules, a passionate web developer with a knack for blending creativity and technology. From my early days of programming games on a TI-84+ calculator to mastering the art of juggling, fire performance, and magic in the circus, I've always been drawn to the extraordinary. Today, as a web developer, I combine my technical expertise with a creative mindset to craft digital experiences that stand out.
                             </p>
                         </div>
                     </div>
                     <div className="block">
                         <div>
                             <p>
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi voluptates soluta enim, eum accusamus ducimus error nobis voluptas porro, assumenda cumque expedita officia dicta odio dolore nihil deserunt. Provident, ad.
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae quaerat nobis ducimus obcaecati recusandae magnam? Impedit rerum, a aperiam facere ut numquam illo, amet fugit enim placeat tenetur ipsum repellat.
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi esse, quo provident voluptates laudantium unde aliquam numquam repellat nulla, itaque, nisi atque perspiciatis sint! Adipisci doloribus non quod cum! Reiciendis.
+                                I officially embarked on my web development journey in March this year, but my programming journey began at the age of 13. This early start equipped me with a solid coding foundation that I now bring to every project. What truly sets me apart is my passion for challenges and innovative solutions. I thrive on complex projects that demand creativity, avoiding the ordinary to create websites that leave a lasting impact.
                             </p>
                         </div>
                         <img src={coder} alt="coder" />
@@ -35,9 +31,7 @@ const About = () => {
                         <img src={languages} alt="coder" /> 
                         <div>
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga error dicta quae perferendis fugit esse ea suscipit illum neque! Facere omnis laudantium, nam repellendus id dolorum quaerat? Quisquam, corrupti! Illo.
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis similique, veniam officia, cum ullam optio asperiores quo quam ea commodi corporis corrupti, reiciendis repellat laudantium doloremque numquam pariatur excepturi accusantium.
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, rem! Earum nemo vero totam repellendus suscipit illo ex accusantium officia. Earum porro vero quisquam quod aut quos voluptatum voluptates nostrum.
+                                Beyond web development, I'm a true creative at heart. Whether it's through drawing or my background in the circus arts, I've developed a keen sense of storytelling and visual expression. I believe that every website should tell a captivating story, just like a well-choreographed circus act or a beautifully illustrated drawing. When you   collaborate with me, you can expect a unique and engaging online representation that reflects your brand's essence.
                             </p>
                         </div>
                     </div>

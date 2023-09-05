@@ -86,7 +86,7 @@ export default function HomeVideo({ resize, laptop, phone, hidesite, routeChange
         if (sitewidth === width && siteheight === height) {
             routeChange('home')
         }
-    }, [scrollheight])
+    }, [scrollheight, routeChange])
 
     useEffect(() => {
         const welcome = document.querySelector(".homevideo_welcome")
@@ -112,7 +112,9 @@ export default function HomeVideo({ resize, laptop, phone, hidesite, routeChange
         <div className="wrapper">
             <div className="homevideo_welcome">
                 <h1>Welcome</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste sequi cumque cupiditate et iusto ea veniam? Porro non nostrum et voluptate dolorum delectus, nemo corrupti rerum cupiditate aperiam consequuntur qui.</p>
+                <p>
+                    Are you looking for a young and passionate web developer to help your brand stand out on the web? scroll down to find what you are looking for
+                </p>
             </div>
             <div id='site' className="site">
                 <Home resize={resize} scrollheight={scrollheight}/>

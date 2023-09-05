@@ -17,13 +17,14 @@ const Home = ({ resize, scrollheight }) => {
                 <div className="home_text">
                     <h1>Jules</h1>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. A, possimus dolore dolor odit totam veritatis omnis unde neque magnam maxime quaerat temporibus atque minus est cum enim qui deleniti eius?
+                        I'm a web developer specializing in crafting stunning, creative websites for small to medium-sized businesses. Using HTML5, CSS3, JavaScript, React.js, and WordPress, I'm dedicated to creating unique online representations that stand out and make a lasting impact. Let's work together to showcase your company's excellence on the web!
                     </p>
                     <div className='home_icons'>
                         <i className="devicon-html5-plain-wordmark"></i>
                         <i className="devicon-css3-plain-wordmark"></i>
                         <i className="devicon-javascript-plain"></i>
                         <i className="devicon-react-original-wordmark"></i>
+                        <i class="devicon-wordpress-plain-wordmark"></i>
                         <i className="devicon-github-original-wordmark"></i>                    
                 </div>
                 </div>    

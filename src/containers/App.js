@@ -37,7 +37,7 @@ function App({initialroute}) {
 
   useMemo(() => {
     handlePhone();
-  }, [phone, laptop, phonevideo, laptopvideo])
+  }, [])
   
   
   
@@ -53,11 +53,10 @@ function App({initialroute}) {
     if (window.pageYOffset > 1) {
       setHidden(true);
       setScrolled(true);
-
-    } else if(laptop && route != 'homevideo'){
+    } else if(laptop && (route !== 'homevideo')){
       setHidden(false);
       setScrolled(false);
-    } else {
+    } else if(!laptop || (route === 'homevideo')){
       setHidden(true);
       setScrolled(false);
     }
@@ -72,12 +71,6 @@ function App({initialroute}) {
       scrollTo(route);
     }
   }, [route])
-
-/*   useEffect(() => {
-    window.scrollTo({
-      top: 0
-    })
-  }, [route]) */
   
   useEffect(() => {
     window.addEventListener('resize', handlePhone);
@@ -96,7 +89,7 @@ function App({initialroute}) {
     return function cleanup() {
       window.removeEventListener('scroll', scroll);
     }
-  }, [])
+  }, [scrollheight])
 
   const showMenu = () => {
     setHidden(false);
@@ -184,23 +177,3 @@ function App({initialroute}) {
 }
 
 export default App;
-
-/* return (
-  <div className="App">
-    <Navigation routeChange={routeChange} hidden={hidden}/>
-      {
-        route==='homevideo'
-          ? <HomeVideo hidesite={hidesite} routeChange={routeChange} scrollheight={scrollheight}/>  
-          : (route === 'home'
-              ? <main><Home routeChange={routeChange} scrollheight={scrollheight}/></main>
-              : (route==='about'
-                ? <About/>
-                : (route === 'projects'
-                    ?<Projects/>
-                    :<Contact/>  
-                  )
-                )
-            )          
-      }
-  </div>
-); */
