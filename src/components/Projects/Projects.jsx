@@ -1,6 +1,6 @@
 import './Projects.css';
 import React from "react";
-import website1 from './website1.png';
+import Doe from './Doe.png';
 import website2 from './website2.jpg';
 import website3 from './website3.jpg';
 import website4 from './website4.png';
@@ -13,15 +13,15 @@ const Projects = () => {
                 </div>
                 <div className='projects'>
                     <div className='project'>
-                        <div className="link">
-                            <img src={website1} alt="website1" />
+                        <a className="link" href='https://fancypigeon5.github.io/DOE/'>
+                            <img src={Doe} alt="Doe" />
                             <div className='overlay'>
                                 <p>
                                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque repellendus sed quas minus fugit eum fugiat necessitatibus error neque inventore molestiae eius odit perspiciatis ea nisi quasi, recusandae nostrum consectetur.
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, eos corporis! Quas dolores dicta et, labore dolorem omnis maxime quod eum quis eius eligendi totam, accusamus, qui corporis ipsa minima!
                                 </p>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div className='project'>
                         <div className="link">

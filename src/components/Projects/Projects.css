@@ -5,7 +5,7 @@
     }
     
     .project .link {
-        margin: 5%;
+        /* margin: 5%; */
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -15,7 +15,7 @@
     }
 
     .project {
-        width: 90%;
+        width: 100%;
         border-radius: 10px;
         display: flex;
         justify-content: center;

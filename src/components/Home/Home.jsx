@@ -17,7 +17,8 @@ const Home = ({ resize, scrollheight }) => {
                 <div className="home_text">
                     <h1>Jules</h1>
                     <p>
-                        I'm a web developer specializing in crafting stunning, creative websites for small to medium-sized businesses. Using HTML5, CSS3, JavaScript, React.js, and WordPress, I'm dedicated to creating unique online representations that stand out and make a lasting impact. Let's work together to showcase your company's excellence on the web!
+                        Crafting your digital dreams
+                        {/* I'm a web developer specializing in crafting stunning, creative websites for small to medium-sized businesses. Using HTML5, CSS3, JavaScript, React.js, and WordPress, I'm dedicated to creating unique online representations that stand out and make a lasting impact. Let's work together to showcase your company's excellence on the web! */}
                     </p>
                     <div className='home_icons'>
                         <i className="devicon-html5-plain-wordmark"></i>
