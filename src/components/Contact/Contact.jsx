@@ -22,11 +22,11 @@ const Contact = () => {
 
     return (
         <div id='contact' className="contact">
-            <div className="contact_welcome">
+            <div className="contact_welcome animateTitle">
                 <h1>Contact me</h1>
             </div>
             <div className="contact_form_wrap">
-                <div className="contact_form">
+                <div className="contact_form animateTitle">
                     <form id='form' ref={form} onSubmit={sendEmail}>
                         <label htmlFor="name" >Name</label>
                         <input name="name" type="text" id="name" placeholder="Your name..."/>
@@ -35,7 +35,7 @@ const Contact = () => {
                         <input type="text" name='subject' id="subject" placeholder="The subject..." />
 
                         <label htmlFor="email">Email</label>
-                        <input type="text" name='email' id="subject" placeholder="Your email..." />
+                        <input type="text" name='email' id="email" placeholder="Your email..." />
 
                         <label htmlFor="message">Message</label>
                         <textarea name="message" id="" cols="30" rows="10" placeholder="Your message..."></textarea>

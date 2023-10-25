@@ -7,11 +7,11 @@ import languages from './languages.png';
 const About = () => {
     return (
             <div id='about' className="about_container">
-                <div className="about_welcome">
+                <div className="about_welcome animateTitle">
                     <h1>About me</h1>
                 </div>
                 <div className="info">
-                    <div className="block">
+                    <div className="block animateRight">
                         <img src={programming} alt="programming" />
                         <div>
                             <p>
@@ -19,7 +19,7 @@ const About = () => {
                             </p>
                         </div>
                     </div>
-                    <div className="block">
+                    <div className="block animateLeft">
                         <div>
                             <p>
                                 I officially embarked on my web development journey in March this year, but my programming journey began at the age of 13. This early start equipped me with a solid coding foundation that I now bring to every project. What truly sets me apart is my passion for challenges and innovative solutions. I thrive on complex projects that demand creativity, avoiding the ordinary to create websites that leave a lasting impact.
@@ -27,7 +27,7 @@ const About = () => {
                         </div>
                         <img src={coder} alt="coder" />
                     </div>
-                    <div className="block">
+                    <div className="block animateRight">
                         <img src={languages} alt="coder" /> 
                         <div>
                             <p>

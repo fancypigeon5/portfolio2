@@ -1,51 +1,36 @@
 import Navigation from '../components/Navigation/Navigation';
-import About from '../components/About/About';
+import About2 from '../components/About2/About2';
 import Projects from '../components/Projects/Projects';
 import Home from '../components/Home/Home';
-import HomeVideo from '../components/Video/Video';
 import Contact from '../components/Contact/Contact';
-import laptopvideo from '../components/Video/laptop-opening.mp4';
-import phonevideo from '../components/Video/phone.mp4';
 import './App.css';
 import React , {useState , useEffect, useMemo} from 'react';
 
 function App({initialroute}) {
   const [scrolled, setScrolled] = useState(false)
   const [scrollheight, setScrollheight ] = useState(0)
-  const [hidesite, setHidesite] = useState(true)
   const [hidden, setHidden] = useState(false)
   const [route, setRoute] = useState(initialroute)
-  const [phone, setPhone] = useState(phonevideo)
+  const [popup, setPopup] = useState(false)
+  const [popupContent, setPopupContent] = useState({img:'', title:'', text:''})
   const [laptop, setLaptop] = useState(true)
-  const [resize, setResize] = useState(1)
 
   const routeChange = (route) => {
     setRoute(route)
   }
 
-  const handlePhone = () => {
-    let e = window.innerWidth;
-    setResize(e);
-    if (e < 640) {
-      setPhone(phonevideo);
-      setLaptop(false)
-    } else {
-      setPhone(laptopvideo);
-      setLaptop(true)
-    }
+  const popupContentChange = (content) => {
+    setPopupContent(content)
   }
 
-  useMemo(() => {
-    handlePhone();
-  }, [])
-  
-  
-  
+  const popupChange = (value) => {
+    setPopup(value)
+  }
 
-  const scrollTo = (id) => {
+  const scrollToElement = (id, here) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: 'smooth', block: here });
     }
   };
 
@@ -53,42 +38,60 @@ function App({initialroute}) {
     if (window.pageYOffset > 1) {
       setHidden(true);
       setScrolled(true);
-    } else if(laptop && (route !== 'homevideo')){
+    } else {
       setHidden(false);
       setScrolled(false);
-    } else if(!laptop || (route === 'homevideo')){
-      setHidden(true);
-      setScrolled(false);
+    }
+    }
+
+  const checkLaptop = () => {
+    if (window.innerWidth > 640) {
+      setLaptop(true);
+    } else {
+      setLaptop(false);
     }
   }
 
+  useMemo(() => {
+    checkLaptop();
+  }, [])
+
   useEffect(() => {
-    if (route === 'homevideo' || route === 'home') {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animated')
+        }
+      })
+    })
+
+    const animateLeft = document.querySelectorAll('.animateLeft')
+    const animateRight = document.querySelectorAll('.animateRight')
+    const animateTitle = document.querySelectorAll('.animateTitle')
+
+    animateLeft.forEach((el) => {observer.observe(el)})
+    animateRight.forEach((el) => {observer.observe(el)})
+    animateTitle.forEach((el) => {observer.observe(el)})
+
+  }, [route])
+  
+
+  useEffect(() => {
+    if (route === 'home') {
       window.scrollTo({
         top: 0
       })
     } else {
-      scrollTo(route);
+      scrollToElement(route, 'start');
     }
   }, [route])
   
   useEffect(() => {
-    window.addEventListener('resize', handlePhone);
-    window.addEventListener('scroll', scroll);
-    window.addEventListener('scroll', () => {
-      if (window.pageYOffset < 1300) {
-        setHidesite(true);
-      } else {
-        setHidesite(false)
-      }
-    });
+    window.addEventListener('resize', checkLaptop)
+    window.addEventListener('scroll', scroll)
     window.addEventListener('scroll', () => {
       setScrollheight(window.pageYOffset)
     })
-    
-    return function cleanup() {
-      window.removeEventListener('scroll', scroll);
-    }
   }, [scrollheight])
 
   const showMenu = () => {
@@ -133,12 +136,10 @@ function App({initialroute}) {
   })
 
   useEffect(() => {
-    if (route === 'homevideo' && !scrolled) {
-      setHidden(true);
-    } else if (!laptop && !scrolled) {
+    if (!laptop && !scrolled) {
       setHidden(true);
     }
-  }, [route, scrolled, laptop])
+  }, [scrolled, laptop])
 
   useEffect(() => {
     let nav = document.querySelector('nav');
@@ -161,17 +162,18 @@ function App({initialroute}) {
   return (
     <div className="App">
       <Navigation  laptop={laptop} routeChange={routeChange}/>
-        {
-          route === 'homevideo'
-            ? <main><HomeVideo resize={resize} phone={phone} laptop={laptop} hidesite={hidesite} routeChange={routeChange} scrollheight={scrollheight}/></main>
-            : <main>
-                <div className='background'></div>
-                <Home resize={resize} scrollheight={scrollheight}/>
-                <About/>
-                <Projects/>
-                <Contact/>
-              </main>
-        }
+      <main>
+        <div className='background'></div>
+        <Home/>
+        <About2/>
+        <Projects
+          popupContentChange={popupContentChange}
+          popup={popup}
+          popupChange={popupChange}
+          popupContent={popupContent}
+        />
+        <Contact/>
+      </main>
     </div>
   );
 }

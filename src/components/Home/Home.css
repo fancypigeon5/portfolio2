@@ -1,19 +1,20 @@
 @media only screen and (max-width: 640px) {
     .home_text {
-        font-size: 10em;
-        width: 70%;
+        font-size: 1.5em;
+        width: 100%;
     }
     .home_icons i {
-        font-size: 1.5em;
+        font-size: 1em;
     }
 }
 @media only screen and (min-width: 640px) {
     .home_text {
-        font-size: 3em;
-        width: 50%;
+        font-size: 2.5em;
+        width: 100%;
+        height: 100%;
     }
     .home_icons i {
-        font-size: 2em;
+        font-size: 1.5em;
     }
 }
 
@@ -25,23 +26,43 @@
 .home_welcome {
     height: 100%;
     width: 100%;
+    padding-top: 12vh;
+    background-color: rgba(35, 35, 35, 0.8);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.home_welcome h1 {
+.home_text .image {
+    background-image: url(./jules.jpg);
+    background-size: cover;
+    width: 15%;
+    aspect-ratio: 1;
+    border-radius: 200px;
+}
+
+.home_text h1 {
     font-family: 'lobster';
-    font-size: 3em;
-    padding: 0;
+    font-size: 2.5em;
+    padding-bottom: 10%;
     margin: 0;
     
 }
 
+.home_title {
+    position: relative;
+}
+
+.home_title p {
+    position: absolute;
+    top: 50%;
+    left: 6%;
+    margin-top: 0;
+    padding-top: 0;
+}
+
 .home_text {
-    background-color: rgba(35, 35, 35, 0.8);
-    border-radius: 20px;
     padding: 5%;
     align-self: center;
     display: flex;
@@ -50,15 +71,152 @@
     align-items: center;
 }
 
+.home_icons {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.text1 {
+    animation: rotateP1 9s;
+    animation-iteration-count: infinite;
+    opacity: 1;
+    transform: rotateX(0deg) translateY(0%);
+}
+
+.text2 {
+    animation: rotateP2 9s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+    transform: rotateX(90deg) translateY(100%);
+}
+
+.text1 span {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+}
+
+.s1 {
+    animation: rotateS1 9s;
+    animation-iteration-count: infinite;
+    opacity: 1;
+    transform: rotateX(0deg);
+}
+
+.s2 {
+    animation: rotateS2 9s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+    transform: rotateX(90deg) translateY(100%);
+}
+
+@keyframes rotateP1 {
+    0% {
+        transform: rotateX(0deg) translateY(0%);
+        opacity: 1;
+    }
+
+    55% {
+        transform: rotateX(0deg) translateY(0%);
+        opacity: 1;
+    }
+
+    60% {
+        transform: rotateX(-90deg) translateY(-100%);
+        opacity: 0;
+    }
+    95% {
+        transform: rotateX(90deg) translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: rotateX(0deg) translateY(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes rotateP2 {
+    0% {
+        transform: rotateX(90deg) translateY(100%);
+        opacity: 0;
+    }
+    55% {
+        transform: rotateX(90deg) translateY(100%);
+        opacity: 0;
+    }
+    60% {
+        transform: rotateX(0deg) translateY(0%);
+        opacity: 1;
+    }
+    95%{
+        transform: rotateX(0deg) translateY(0%);
+        opacity: 1;
+    }
+    100% {
+        transform: rotateX(-90deg) translateY(-100%);
+        opacity: 0;
+    }
+}
+
+@keyframes rotateS1 {
+    0% {
+        transform: rotateX(0deg) translateY(-50%);
+        opacity: 1;
+    }
+
+    25% {
+        transform: rotateX(0deg) translateY(-50%);
+        opacity: 1;
+    }
+
+    30% {
+        transform: rotateX(-90deg) translateY(-150%);
+        opacity: 0;
+    }
+
+    60% {
+        transform: rotateX(90deg) translateY(50%);
+        opacity: 0;
+    }
+
+    75% {
+        transform: rotateX(0deg) translateY(-50%);
+        opacity: 1;
+    }
+}
+
+@keyframes rotateS2 {
+    0% {
+        transform: rotateX(90deg) translateY(50%);
+        opacity: 0;
+    }
+    25% {
+        transform: rotateX(90deg) translateY(50%);
+        opacity: 0;
+    }
+    30% {
+        transform: rotateX(0deg) translateY(-50%);
+        opacity: 1;
+    }
+    75%{
+        transform: rotateX(0deg) translateY(-50%);
+        opacity: 1;
+    }
+    80% {
+        transform: rotateX(-90deg) translateY(-150%);
+        opacity: 0;
+    }
+}
+
+
+
 /* .home_text p {
     width: 50%;
 } */
 
-.home_icons {
-    width: 60%;
-    display: flex;
-    justify-content: space-between;
-}
+
 
 /* .home_buttons {
     width: 100%;
